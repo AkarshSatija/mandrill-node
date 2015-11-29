@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Mandrill-node : mandrill-node is a node.js module for interfacing with MailChimp&#39;s Mandrill API">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mandrill-node</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/akarshsatija/mandrill-node">View on GitHub</a>
+
+          <h1 id="project_title">Mandrill-node</h1>
+          <h2 id="project_tagline">mandrill-node is a node.js module for interfacing with MailChimp&#39;s Mandrill API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/akarshsatija/mandrill-node/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/akarshsatija/mandrill-node/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="mandrill-node" class="anchor" href="#mandrill-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>mandrill-node</h1>
+
+<p>mandrill-node is a node.js module for interfacing with MailChimp's Mandrill API</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Installing using npm (node package manager):</p>
+
+<pre><code>npm install mandrill-node
+</code></pre>
+
+<p>If you don't have npm installed or don't want to use it:</p>
+
+<pre><code>cd ~/.node_libraries
+git clone git://github.com/vinspire/mandrill-node.git mandrill
+</code></pre>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">//Include the mandrill module</span>
+<span class="pl-k">var</span> mandrill <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>mandrill<span class="pl-pds">'</span></span>);</pre></div>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>A MailChimp account, Mandrill service enabled, Mandrill API key. See the Getting Started guide for more information <a href="http://help.mandrill.com/customer/portal/topics/214457-getting-started/articles">http://help.mandrill.com/customer/portal/topics/214457-getting-started/articles</a>
+</li>
+<li>node.js 0.8.0+</li>
+<li>request 2.9.100+</li>
+<li>underscore 1.3.3+</li>
+</ul>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// The key can be set either by passing the a an object which only</span>
+<span class="pl-c">// contains the key, ex.</span>
+<span class="pl-smi">mandrill</span>.<span class="pl-c1">call</span>({<span class="pl-s"><span class="pl-pds">'</span>key<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>mykey<span class="pl-pds">'</span></span>});
+
+<span class="pl-c">/**</span>
+<span class="pl-c"> * They key could also be set with the request event. All request events</span>
+<span class="pl-c"> * need to have at least a type and a call property set and these values</span>
+<span class="pl-c"> * need to correspond to the valid types and calls recognized by the Mandrill</span>
+<span class="pl-c"> * service.</span>
+<span class="pl-c"> *</span>
+<span class="pl-c"> * Here is an example of a call to Mandrill API's users.info</span>
+<span class="pl-c"> * The docs for this call can be found at http://mandrillapp.com/api/docs/users.html#method=info</span>
+<span class="pl-c"> */</span>
+<span class="pl-smi">mandrill</span>.<span class="pl-c1">call</span>({<span class="pl-s"><span class="pl-pds">'</span>type<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>users<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>call<span class="pl-pds">'</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>info<span class="pl-pds">'</span></span>}, <span class="pl-k">function</span>(<span class="pl-smi">data</span>){
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data);
+});
+
+<span class="pl-c">// For a list of valid calls please visit http://mandrillapp.com/api/docs/index.html</span></pre></div>
+
+<h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributions</h2>
+
+<p>The Mandrill node.js module is designed to be as static as Javascript allows, following a functional or lambda programming paradigm. If you want to learn more about this pattern of development and why this pattern was chosen above other, more traditional, javascript approaches please read the following excellent article <a href="http://howtonode.org/why-use-closure">http://howtonode.org/why-use-closure</a></p>
+
+<p>If you would like to help maintain this project and/or if you have any questions or comments about the library's design or implementation I'd love to hear from you.</p>
+
+<h2>
+<a id="unit-tests" class="anchor" href="#unit-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit Tests</h2>
+
+<p>A unit test using <a href="https://github.com/caolan/nodeunit" title="nodeunit project page">nodeunit</a> for the Mandrill module is avaliable in the 'unit' directory. You will need to copy the configure.json.example to configure.json and change the Mandrill API key from 'mykey' to your Mandrill API key in order for the tests to complete. If you want to contribute any bugfixes or examples please add a unit test for your code and make sure nothing else breaks.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mandrill-node maintained by <a href="https://github.com/akarshsatija">akarshsatija</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
