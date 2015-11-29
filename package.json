@@ -1,12 +1,12 @@
 {
     "name" : "mandrill-node",
-    "version" : "1.1.0",
+    "version" : "1.1.1",
     "description" : "A node.js wrapper for MailChimp's Mandrill API.",
     "author" : "Akarsh Satija (https://github.com/akarshsatija)",
     "main" : "mandrill.js",
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/vinspire/mandrill-node"
+        "url" : "https://github.com/akarshsatija/mandrill-node"
     },
     "engines": {
         "node": ">= 0.8"
