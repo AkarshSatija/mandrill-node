@@ -15,6 +15,6 @@
         "request": ">= 2.9.100",
         "underscore": ">= 1.3.3"
     },
-    "homepage": "https://github.com/vinspire/mandrill-node",
+    "homepage": "http://akarshsatija.github.io/mandrill-node",
     "keywords": ["mandrill", "node mandrill","mandrill node", "mandrill api", "mandrill api template", "mandrill template send", "mandrill api template send", "email", "send email", "send template email","template email", "send template", "email api", "mailchimp", "mailchimp api", "email mailchimp"]
 }
