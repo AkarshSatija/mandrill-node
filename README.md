@@ -7,11 +7,11 @@ mandrill-node is a node.js module for interfacing with MailChimp's Mandrill API
 Installing using npm (node package manager):
 
     npm install mandrill-node
-    
+
 If you don't have npm installed or don't want to use it:
 
     cd ~/.node_libraries
-    git clone git://github.com/vinspire/mandrill-node.git mandrill
+    git clone git://github.com/akarshsatija/mandrill-node.git mandrill
 
 ```javascript
 //Include the mandrill module
