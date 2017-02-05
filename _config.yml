@@ -1,0 +1,8 @@
+title: Mandrill-node
+description: mandrill-node is a node.js module for interfacing with MailChimp's Mandrill API
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
